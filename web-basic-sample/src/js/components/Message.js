@@ -4,6 +4,7 @@ import { SendBirdAction } from '../SendBirdAction';
 import { COLOR_RED, MESSAGE_REQ_ID } from '../const';
 import { MessageDeleteModal } from './MessageDeleteModal';
 import { UserBlockModal } from './UserBlockModal';
+import { AdminMessageModal } from './AdminMessageModal';
 import { Chat } from '../Chat';
 
 class Message {
@@ -179,6 +180,14 @@ class Message {
     const data = createDivEl({ className: styles['message-admin3'], content: protectFromXSS(this.message.data) });
     root.appendChild(msg);
     root.appendChild(data);
+    
+    const adminMessageModal = new AdminMessageModal({
+      channel: this.channel,
+      message: this.message,
+      data: this.data,
+    });
+    adminMessageModal.render();
+
     return root;
   }
 
