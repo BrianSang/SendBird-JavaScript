@@ -177,9 +177,9 @@ class Message {
   _createAdminElement() {
     const root = createDivEl({ className: styles['chat-message'], id: this.message.messageId });
     const msg = createDivEl({ className: styles['message-admin2'], content: protectFromXSS(this.message.message)});
-    const data = createDivEl({ className: styles['message-admin3'], content: protectFromXSS(this.message.data) });
+    //const data = createDivEl({ className: styles['message-admin2'], content: protectFromXSS(this.message.data) });
     root.appendChild(msg);
-    root.appendChild(data);
+    //root.appendChild(data);
     
     const adminMessageModal = new AdminMessageModal({
       channel: this.channel,

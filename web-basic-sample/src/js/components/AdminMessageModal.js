@@ -5,8 +5,8 @@ import { Spinner } from './Spinner';
 import { Modal2 } from './Modal2';
 import { Chat } from '../Chat';
 
-const title = 'Admin Message';
-const description = 'Today\'s Quote';
+const title = 'Today\'s Quote';
+const description = 'Admin Message';
 const submitText = 'OK';
 
 class AdminMessageModal extends Modal2 {
@@ -22,8 +22,8 @@ class AdminMessageModal extends Modal2 {
   _createElement() {
     const content = createDivEl({
       className: styles['modal-message'],
-      content: this.message.isFileMessage() ? protectFromXSS(this.message.name) : protectFromXSS(this.message.message) + 
-        " - " + protectFromXSS(this.message.data)
+      content: this.message.isFileMessage() ? protectFromXSS(this.message.name) : protectFromXSS(this.message.message) + "<br>" +
+        protectFromXSS(this.message.data.replace(/"/g, '').replace(/{/g,'').replace(/}/g,'')) 
     });
     this.contentElement.appendChild(content);
   }
