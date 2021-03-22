@@ -21,9 +21,9 @@ class AdminMessageModal extends Modal2 {
 
   _createElement() {
     const content = createDivEl({
-      className: styles['modal-message'],
-      content: this.message.isFileMessage() ? protectFromXSS(this.message.name) : protectFromXSS(this.message.message) + "<br>" +
-        protectFromXSS(this.message.data.replace(/"/g, '').replace(/{/g,'').replace(/}/g,'')) 
+      className: styles['modal-admin-message'],
+      content: this.message.isFileMessage() ? protectFromXSS(this.message.name) : protectFromXSS(this.message.message) + 
+      "<br>" + protectFromXSS(this.message.data.replace(/"/g, '').replace(/{/g,'').replace(/}/g,'')) 
     });
     this.contentElement.appendChild(content);
   }

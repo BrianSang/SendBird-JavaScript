@@ -1,12 +1,12 @@
 @import 'mixins';
 @import 'variables';
 
-.modal-message {
+.modal-admin-message {
   display: flex;
-  align-items: center;
+  align-items: center; 
   padding: 10px 10px;
   width: 100%;
-  border: 1px solid $color-white;
+  border: 0px solid $color-white;
   background-color: $color-gray;
   font-size: 18px;
   margin: 10px 0;
