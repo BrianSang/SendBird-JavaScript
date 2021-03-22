@@ -15,7 +15,6 @@
 
   & > .message-content {
     display: inline;
-
     & > .message-nickname {
       align-items: center;
       display: inline;
@@ -23,37 +22,30 @@
       flex-direction: column;
       cursor: pointer;
     }
-
     & > .message-nickname.is-user {
       font-weight: 600;
       color: $color-purple-deep;
       cursor: initial;
     }
-
     & > .message-content {
       display: inline;
       white-space: pre-line;
     }
-
     & > .message-content.is-file {
       cursor: pointer;
-
       @include hover-focus {
         color: $color-blue-dark;
       }
     }
-
     & > .time {
       display: inline;
       margin-left: 8px;
       font-size: 12px;
       opacity: 0.5;
     }
-
     & > .time.is-user {
       cursor: pointer;
     }
-
     & > .read {
       display: none;
       vertical-align: middle;
@@ -68,26 +60,22 @@
       @include border-radius(50%);
       background: $color-red;
     }
-
     & > .read.active {
       display: inline-block;
     }
   }
-
   & > .image-content {
     display: block;
     border-left: 2px solid $color-black-text;
     padding-left: 10px;
     margin-top: 8px;
     cursor: pointer;
-
     & > .image-render {
       display: inline;
       max-width: 300px;
       max-height: 300px;
     }
   }
-
   & > .message-admin {
     display: flex;
     align-items: center;
@@ -95,7 +83,6 @@
     font-style: italic;
     color: $color-black-text;
   }
-
   & > .message-admin2 {
     display: flex;
     align-items: center;
