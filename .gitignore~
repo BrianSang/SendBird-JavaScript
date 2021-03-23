@@ -9,6 +9,7 @@ web-live-chat/dist
 npm-debug.log
 web-widget/dist
 
+package-lock.json
 Pods/
 Podfile.lock
 .env
